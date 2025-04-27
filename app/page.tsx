@@ -1,4 +1,4 @@
-
+'use client';
 import { useState } from "react";
 
 export default function Page() {
@@ -6,7 +6,7 @@ export default function Page() {
   const [filter, setFilter] = useState("");
 
   const cards = [
-    { pair: "AUDCAD", esito: "🟢 Debole Bias Long", long: "65%", short: "35%", prezzoMedio: "0.91", conclusione: "Acquisto consigliato" },
+        { pair: "AUDCAD", esito: "🟢 Debole Bias Long", long: "65%", short: "35%", prezzoMedio: "0.91", conclusione: "Acquisto consigliato" },
     { pair: "AUDCHF", esito: "🔴 Debole Bias Short", long: "30%", short: "70%", prezzoMedio: "0.65", conclusione: "Vendita consigliata" },
     { pair: "AUDJPY", esito: "🔴🔴 Forte Bias Short", long: "20%", short: "80%", prezzoMedio: "84.72", conclusione: "Vendita consigliata" },
     { pair: "AUDNZD", esito: "🔴🔴 Forte Bias Short", long: "25%", short: "75%", prezzoMedio: "1.09", conclusione: "Vendita consigliata" },
@@ -15,7 +15,7 @@ export default function Page() {
     { pair: "CADJPY", esito: "🔴🔴 Forte Bias Short", long: "30%", short: "70%", prezzoMedio: "91.57", conclusione: "Vendita consigliata" },
     { pair: "CHFJPY", esito: "🟢🟢 Forte Bias Long", long: "80%", short: "20%", prezzoMedio: "151.25", conclusione: "Acquisto consigliato" },
     { pair: "EURAUD", esito: "🟢🟢 Forte Bias Long", long: "75%", short: "25%", prezzoMedio: "1.56", conclusione: "Acquisto consigliato" },
-    { pair: "EURCAD", esito: "🟢 Debole Bias Long", long: "60%", short: "40%", prezzoMedio: "1.45", conclusione: "Acquisto consigliato" },
+    { pair: "EURCAD", esito: "🟢 Debole Bias Long", long: "60%", short: "40%", prezzoMedio: "1.45", conclusione: "Acquisto consigliato" },    
     { pair: "EURCHF", esito: "🟢 Debole Bias Long", long: "65%", short: "35%", prezzoMedio: "0.95", conclusione: "Acquisto consigliato" },
     { pair: "EURGBP", esito: "🟢 Debole Bias Long", long: "55%", short: "45%", prezzoMedio: "0.87", conclusione: "Acquisto consigliato" },
     { pair: "EURJPY", esito: "⚖️ Neutrale", long: "50%", short: "50%", prezzoMedio: "133.56", conclusione: "Osservare" },
@@ -37,7 +37,6 @@ export default function Page() {
     { pair: "XAGUSD", esito: "🔴 Debole Bias Short", long: "30%", short: "70%", prezzoMedio: "24.90", conclusione: "Vendita consigliata" },
     { pair: "XAUUSD", esito: "🔴 Debole Bias Short", long: "35%", short: "65%", prezzoMedio: "1825.50", conclusione: "Vendita consigliata" }
   ];
-
   const filteredCards = cards.filter((item) => {
     const matchesSearch = item.pair.toLowerCase().includes(search.toLowerCase());
     let matchesFilter = true;
@@ -47,9 +46,9 @@ export default function Page() {
     } else if (filter === "forteVerde") {
       matchesFilter = item.esito.includes("🟢🟢");
     } else if (filter === "deboleRosso") {
-      matchesFilter = item.esito.includes("🔴") && !item.esito.includes("🔴🔴");
+      matchesFilter = item.esito.includes("🔴"));
     } else if (filter === "deboleVerde") {
-      matchesFilter = item.esito.includes("🟢") && !item.esito.includes("🟢🟢");
+      matchesFilter = item.esito.includes("🟢");
     }
 
     return matchesSearch && matchesFilter;
@@ -62,7 +61,6 @@ export default function Page() {
     if (esito.includes("🟢")) return "bg-yellow-400";
     return "bg-white";
   };
-
   return (
     <div className="p-4 space-y-6 bg-black min-h-screen text-white">
       <h1 className="text-2xl font-bold text-center">📊 Forex Sentiment Tracker Beta</h1>
@@ -99,3 +97,7 @@ export default function Page() {
     </div>
   );
 }
+
+
+
+      </div>
