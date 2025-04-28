@@ -3,17 +3,14 @@ import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { toast } from "sonner";
-
-export default function ForexSentimentTrackerBeta() {
+export default function Page() { ... }
   const [search, setSearch] = useState("");
   const [filter, setFilter] = useState("");
   const [loggedIn, setLoggedIn] = useState(false);
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
-
   const correctUsername = "admin";
   const correctPassword = "sentiment2025";
-
   const handleLogin = () => {
     if (username === correctUsername && password === correctPassword) {
       setLoggedIn(true);
@@ -30,8 +27,7 @@ export default function ForexSentimentTrackerBeta() {
     if (esito.includes("🟢")) return "bg-yellow-300 border-white border-2";
     return "bg-white border-white border-2";
   };
-
-         const cards = [ 
+     const cards = [ 
     
      {
       pair: "AUDCAD",
