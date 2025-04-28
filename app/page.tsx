@@ -26,7 +26,7 @@ const getCardColor = (esito) => {
     if (esito.includes("🟢")) return "bg-yellow-300 border-white border-2";
     return "bg-white border-white border-2";
   };
-   const cards = [ 
+    const cards = [ 
       {
       pair: "AUDCAD",
       date: "2025-04-26",
