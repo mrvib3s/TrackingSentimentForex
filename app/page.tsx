@@ -61,7 +61,7 @@ export default function Page() {
     if (esito.includes("🟢")) return "bg-yellow-400";
     return "bg-white";
   };
-  return (
+   return (
     <div className="p-4 space-y-6 bg-black min-h-screen text-white">
       <h1 className="text-2xl font-bold text-center">📊 Forex Sentiment Tracker Beta</h1>
 
@@ -97,7 +97,3 @@ export default function Page() {
     </div>
   );
 }
-
-
-
-      </div>
