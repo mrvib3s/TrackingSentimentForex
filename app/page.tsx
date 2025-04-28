@@ -19,8 +19,7 @@ export default function Page() { ... }
       toast.error("Credenziali errate");
     }
   };
-
-  const getCardColor = (esito) => {
+const getCardColor = (esito) => {
     if (esito.includes("🔴🔴")) return "bg-red-500 border-white border-2";
     if (esito.includes("🟢🟢")) return "bg-green-500 border-white border-2";
     if (esito.includes("🔴")) return "bg-orange-400 border-white border-2";
@@ -28,8 +27,7 @@ export default function Page() { ... }
     return "bg-white border-white border-2";
   };
      const cards = [ 
-    
-     {
+      {
       pair: "AUDCAD",
       date: "2025-04-26",
       long: 44,
