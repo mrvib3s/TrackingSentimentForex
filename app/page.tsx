@@ -3,7 +3,7 @@ import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { toast } from "sonner";
-export default function Page() { ... }
+export default function Page() { 
   const [search, setSearch] = useState("");
   const [filter, setFilter] = useState("");
   const [loggedIn, setLoggedIn] = useState(false);
